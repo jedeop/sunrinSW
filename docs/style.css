@@ -77,8 +77,8 @@ header h1 {
 #explain {
   background-color: rgb(207, 138, 247);
 }
-#blank {
-  background-color: rgb(250, 252, 203);
+#images {
+  background-color: rgb(251, 255, 147);
 }
 
 @media (max-width: 600px) {
