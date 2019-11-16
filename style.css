@@ -1,0 +1,89 @@
+* {
+  font-size: 3vw;
+  font-family: '나눔스퀘어 ExtraBold';
+}
+body {
+  background: white;
+}
+header {
+  color: black;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  margin: 0px;
+  padding: 1em;
+  background-color: rgba(147, 245, 240, 0.76);
+}
+header * {
+  margin: 0px;
+  padding: 0px;
+}
+header h3 {
+  font-size: 0.7rem;
+}
+header h1 {
+  font-size: 1.2rem;
+}
+
+.grid {
+  margin: auto;
+  margin-top: 7em;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-sizing: border-box;
+  
+  width: 75vw;
+  padding: 0px;
+
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.grid > * {
+  margin: 0px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#youtube {
+  background-color: red;
+}
+#youtube i {
+  font-size: 5rem;
+}
+#dev_note {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 0.8em;
+}
+#dev_note * i {
+  font-size: 2rem;
+  margin-bottom: 3px;
+}
+
+#source_code {
+  background-color: rgb(51, 207, 77);
+}
+#diagram {
+  background-color: rgb(101, 135, 247);
+}
+#explain {
+  background-color: rgb(207, 138, 247);
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  * {
+    font-size: 5vw;
+  }
+}
