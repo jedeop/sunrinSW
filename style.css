@@ -1,5 +1,5 @@
 * {
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-family: '나눔스퀘어 ExtraBold';
 }
 body {
@@ -76,6 +76,9 @@ header h1 {
 }
 #explain {
   background-color: rgb(207, 138, 247);
+}
+#blank {
+  background-color: rgb(250, 252, 203);
 }
 
 @media (max-width: 600px) {
