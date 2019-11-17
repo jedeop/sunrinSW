@@ -6,11 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../master.css">
-  <link rel="stylesheet" href="./detailpage.css">
   <title>
     작품 사진 | SUNRIN SW: Team AUSGAU
   </title>
   <style>
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      border-radius: 10px;
+      overflow: hidden;
+      grid-gap: 10px;
+      background-color: rgba(0, 0, 0, 0.062);
+    }
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
     .grid * {
       width: 100%;
     }
@@ -23,12 +34,18 @@
     <h1>작품 사진</h1>
   </header>
   <div class="grid">
-    <img src="./source/show1.JPG" alt="사진1">
-    <img src="./source/show2.JPG" alt="사진2">
-    <img src="./source/show3.JPG" alt="사진3">
-    <img src="./source/show4.JPG" alt="사진4">
+    <div>
+      <img src="../source/show1.JPG" alt="사진1">
+    </div>
+    <div>
+      <img src="../source/show2.JPG" alt="사진2">
+    </div>
+    <div>
+      <img src="../source/show3.JPG" alt="사진3">
+    </div>
+    <div>
+      <img src="../source/show4.JPG" alt="사진4">
+    </div>
   </div>
-  <script src="./script.js"></script>
 </body>
-
 </html>
