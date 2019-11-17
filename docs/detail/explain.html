@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../master.css">
+  <link rel="stylesheet" href="./detailpage.css">
+  <title>
+    프로젝트 설명 | SUNRIN SW: Team AUSGAU
+  </title>
+  <style>
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    .grid > div {
+      background-color: rgba(0, 0, 0, 0.062);
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 30px;
+      padding-bottom: 20px;
+    }
+    h4 {
+      margin: 0px;
+      padding: 0px;
+      font-size: 1.1em;
+    }
+    p {
+      margin: 0px;
+      padding: 10px;
+    }
+    .sub.grid {
+      margin: 10px auto 5px auto;
+      width: 90%;
+      padding: 10px;
+      grid-gap: 10px;
+    }
+    .sub.grid * {
+      font-size: 0.8em;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h3>스마트폰을 활용하여 스마트폰 게임 자동 플레이</h3>
+    <h1>프로젝트 설명</h1>
+  </header>
+  <div class="grid">
+    <div>
+      이 프로젝트는 아두이노를 이용하여 게임 '무한의 계단'을 자동으로 플레이하는 장치를 만드는 것입니다!
+    </div>
+    <div>
+      <h4>원리</h4>
+      <p>
+        RGB 컬러센서 (TCS3200)를 통해 게임 화면 중 필요한 부분(다음 발판이 오는 위치)을 인식합니다.<br>
+        인식한 데이터를 바탕으로 다음 발판이 왼쪽, 오른쪽 중 어디에 있는지 알아내고<br>
+        그에 알맞게 서보모터를 움직여 화면을 터치함으로써 게임을 자동으로 플레이합니다.<br>
+      </p>
+    </div>
+    <div>
+      <h4>부품 설명</h4>
+      <div class="grid sub">
+        <div>
+          <h4>아두이노 Uno</h4>
+          <p>여러가지 센서와 전자 부품들을 연결하여 제어할 수 있는 장치로 소형 컴퓨터라고 생각하면 됩니다.</p>
+        </div>
+        <div>
+          <h4>RGB컬러센서(TCS3200)</h4>
+          <p>색을 인식하는 센서입니다.</p>
+        </div>
+        <div>
+          <h4>서보모터</h4>
+          <p>원하는 위치나 원하는 각도만큼 회전시킬 수 있는 모터입니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

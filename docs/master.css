@@ -1,0 +1,40 @@
+* {
+  font-size: 1.5vw;
+  font-family: '나눔스퀘어 ExtraBold';
+}
+
+body {
+  background: white;
+}
+
+header {
+  color: black;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  margin: 0px;
+  padding: 1em;
+  background-color: rgba(147, 245, 240, 0.76);
+}
+
+header * {
+  margin: 0px;
+  padding: 0px;
+}
+
+header h3 {
+  font-size: 0.7rem;
+}
+
+header h1 {
+  font-size: 1.2rem;
+}
+
+.grid {
+  display: grid;
+
+  margin: auto;
+  margin-top: 7em;
+  width: 75vw;
+}
