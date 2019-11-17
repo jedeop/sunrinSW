@@ -1,4 +1,4 @@
-//read color from color sensor
+//컬러센서로부터 색을 인식하는 함수
 
 void readColor (){
   // Setting red filtered photodiodes to be read
@@ -8,7 +8,6 @@ void readColor (){
   frequency = pulseIn(sensorOut, LOW);
   // Printing the value on the serial monitor
   rgb[0] = frequency;
-  //delay(100);
   
   // Setting Green filtered photodiodes to be read
   digitalWrite(S2,HIGH);
@@ -17,7 +16,6 @@ void readColor (){
   frequency = pulseIn(sensorOut, LOW);
   // Printing the value on the serial monitor
   rgb[1] = frequency;
-  //delay(100);
   
   // Setting Blue filtered photodiodes to be read
   digitalWrite(S2,LOW);
@@ -26,5 +24,4 @@ void readColor (){
   frequency = pulseIn(sensorOut, LOW);
   // Printing the value on the serial monitor
   rgb[2] = frequency;
-  //delay(100);
 }

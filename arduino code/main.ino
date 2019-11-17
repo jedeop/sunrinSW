@@ -14,9 +14,9 @@ Servo rightServo; //오르기
 #define sensorOut 2
 int frequency = 0;
 
-int rgb[3]; //result of color senser. [0]=red, [1]=green [2]=blue
+int rgb[3]; //센서가 인식한 값. [0]=red, [1]=green [2]=blue
 
-//game stat variable
+//게임 상태 변수
 int lastPos = LEFT; 
 int thisPos = LEFT;
 
@@ -38,20 +38,20 @@ void setup() {
   
   Serial.begin(9600);
 
-  leftServo.write(80);
+  leftServo.write(80); //서보모터 초기화
   delay(500);
   rightServo.write(80);
   delay(500);
 }
 void loop() {
   
-  readColor();
+  readColor(); //색 인식
 
-  Serial.print(rgb[0]);Serial.print(" "); //result of senser
+  Serial.print(rgb[0]);Serial.print(" "); //센서 결과값을 Serial에 출력
   Serial.print(rgb[1]);Serial.print(" ");
   Serial.print(rgb[2]);Serial.println();
 
-  if(45 <= rgb[0] && rgb[0] <= 55 && 64 <= rgb[1] && rgb[1] <= 74  && 61 <= rgb[2] && rgb[2] <= 72){ // is the next pos is right?
+  if(45 <= rgb[0] && rgb[0] <= 55 && 64 <= rgb[1] && rgb[1] <= 74  && 61 <= rgb[2] && rgb[2] <= 72){ // 다음 위치게 오른쪽인가?
     thisPos = RIGHT;
     Serial.println("MATCH");
   } else {
@@ -61,8 +61,8 @@ void loop() {
   if(thisPos == lastPos){
     touch(RIGHT); //오르기
   } else {
-    touch(LEFT);
-    lastPos = thisPos; // 회전하기
+    touch(LEFT); // 회전하기
+    lastPos = thisPos; //이전 발판 위치 업데이트
   }
 
   delay(100);
